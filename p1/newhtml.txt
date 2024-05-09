@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>--Calculation--</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action ="index.jsp" method="POST"> 
+Enter Rupees:<input type="text" name="txt1" value="" /> <br>
+<input type="submit" value="rs to dollar "/> <br>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) Create a “Web Application” [CLIENT]:
+(NOTE THAT: here we are creating WebApplication that’ll consume our created WebService)
+• Navigate to File > New Project > Java Web > Web Application > Name: (p7) > Finish.
+(you’ll get “index.jsp” file)
+• Right-click over Project Name(p7) > New > Web Service Client... >
+Select “WSDL URL” and paste the copied path from the browser >
+Package: (tycs) > Finish.
+
+Create an HTML page and add some code:
+Right-click over Project Name(p7) > New > HTML... > Finish.
+• Now from the palette, add HTML Form(Action:index.jsp, Type:text, Method:Post)
+• Inside Form tag, add 2 Text Input(Name:txt1 & txt2)
+• Inside Form tag, add Button(Label:Submit, Type:submit)
