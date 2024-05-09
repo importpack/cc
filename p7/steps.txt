@@ -1,0 +1,30 @@
+*STEPS(MYSQL Command Line Client):
+
+Create a database and use it:
+>create database p6;
+>use p6; 
+
+*STEPS(NetBeans IDE):
+
+1.Create a Web Application:
+File > New Project > Java Web > Web Application > Name: (p6) >
+Add GlassFish Server > Finish > (you’ll get index.jsp, delete this file)
+
+2.Create a database connection:
+(NOTE THAT: here we are connecting our created database with NetBeans IDE, so make sure you add your database_name and password correctly)
+Navigate to Services tab > Databases > Drivers > right-click over MySQL(Connector/J driver)
+> click Connect Using… > Database: (change “mysql” to “p6”) & Password: (root) & click Test Connection > Finish.
+
+
+3.Create an Entity Class:
+(NOTE THAT: this entity class will create a table with the class name we are providing now.) Navigate to Projec
+ts tab > right-click over Project Name(p6) > New > Entity Class… >
+Class Name: (student) & Package: (tycs) > Next >
+Data Source: (select New Data Source… from dropdown) >
+JNDI Name: (ANYNAME) &
+Database Connection: (select your db connection string from dropdown) > OK > Finish >
+(you’ll get student.java file).
+
+4.Adding some code under class student in “student.java”(entity class) file: (NOTE THAT: these properties will be created as columns in the student table We’ll not create “id” property as it is AUTO-GENERATED)
+Right-click > Insert Code… > Add Property… > Name: (sname) > OK.
+Right-click > Insert Code… > Add Property… > Name: (sclass) > OK.
