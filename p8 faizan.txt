@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Google Location</h1>
+        <form id="locationForm">
+            <input type="text" id="latitude" placeholder="Enter Latitude" value="19.288719" autofocus>
+            <input type="text" id="longitude" placeholder="Enter Longitude" value="72.857889">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div id="mapid" style="height: 400px;"></div>
+
+    <script>
+        document.getElementById('locationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const latInput = document.getElementById('latitude');
+            const lonInput = document.getElementById('longitude');
+
+            if (latInput.value && lonInput.value) {
+                const lat = parseFloat(latInput.value);
+                const lon = parseFloat(lonInput.value);
+
+                const map = L.map('mapid').setView([lat, lon], 15);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+                L.marker([lat, lon]).addTo(map)
+            } else {
+                alert('Please enter both latitude and longitude.');
+            }
+        });
+    </script>
+</body>
+</html>

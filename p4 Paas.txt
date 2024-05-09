@@ -1,0 +1,11 @@
+sudo apt install vscode
+
+
+sudo snap install --classic code
+
+
+
+
+
+
+

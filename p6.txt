@@ -1,0 +1,27 @@
+Installation of OpenStack
+In order to install the DevStack in a system, first, you have to create a Linux VM on your computer (such as using VirtualBox or VMware) or remotely in the cloud (such as using AWS).
+The VM must have at least 4GB of memory, and the proper internet connection is also important. Here, we are going to use one version of the ubuntu, i.e., 18.04.
+Follow the following steps to install the OpenStack in your ubuntu virtual machine :
+Step 1: Update Ubuntu System
+Open the terminal and run the following command to ensure that the system is up to date :
+$ sudo apt update  
+$ sudo apt -y upgrade  
+$ sudo apt -y dist-upgrade  
+
+﻿
+
+tycs@tycs-VirtualBox:~$ hostnamectl 
+
+tycs@tycs-VirtualBox: $ sudo snap install microstack --beta [sudo] password for tycs:
+
+tycs@tycs-VirtualBox: $ snap list microstack
+
+tycs@tycs-VirtualBox: $ sudo microstack init auto-control 
+
+tycs@tycs-VirtualBox: $ microstack.openstack --version 
+
+tycs@tycs-VirtualBox: $ microstack.openstack image list
+
+tycs@tycs-VirtualBox: $ microstack.openstack flavor list
+
+tycs@tycs-VirtualBox: $ sudo snap get microstack config.credentials.keystone-password

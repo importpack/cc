@@ -1,0 +1,53 @@
+FOSS Cloud Installation
+Steps:
+1. Choose your keymap. 2. Confirm that you want to start: yes
+3. Choose Demo-System: 1
+4. Choose a Block-Device: sda
+5. Confirm that you want to continue: yes
+6. Confirm that you want to continue: yes
+7. Choose the network interface: eth0
+8. Choose if you want to use automatic network configuration: Yes
+9. Reboot your system: yes
+10. Login as root and run "fc-node-configuration -n demo-system --password admin" Note :- Above mentioned steps aren’t mandatory you can start with the installation process of
+virt-viewer as shown below. 1. Install virt-viewer. 2. Install spice-client.0.6.3. 3. Open Browser. Once you open browser then on the search type, 192.168.21.36
+
+Uploading ISO files to Foss cloud
+Go to virtual machine>Profile> Upload ISO file>file name
+
+Now choose the ubuntu-16.04.5-desktop-i386 iso-file from the FOSS cloud folder. Then, give your desired file name to it and click on the upload button.
+
+Once done with the upload process go to the create section in profiles. Creating a Profile
+The profile creates the relationship between the ISO file and the FOSS-Cloud. 1. Open Virtual Machines
+2. Choose VM-Profiles
+3. Choose the right Base Profile
+4. Choose the right architecture (Windows only x86_64)
+5. Chose the language (it is a information - not keyboard relevant)
+6. Choose the ISO file (which you gave in file name tab)
+7. Fill out name and description
+8. Choose the amount of memory and volume capacity
+9. Choose amount of CPU
+10. Choose clock offset (normally Windows is "localtime" and Linux is “utc”)
+
+
+Now, we will create a VM template.
+Creating Template
+1. Choose the profile you have prepared before. 2. Add the VM-pool and one or more nodes, where you will run this VM (when the chosen VM- pool has only one node assigned, you don't have a choice)
+3. You can change all the other information you have entered before
+Click on "create" and the template is ready for installing the guest operating system
+
+As you can see the last row of Display column our template is created. 
+To update your template status, click on the green arrow.
+
+Now click on Use Template in Action column of your corresponding template.
+
+Just after clicking on, it a pop up would appear to Open remote-viewer? click on Open-remote- viewer button, you will see the following screen
+
+Note :- If you don't see the above screen follow the below given steps.
+ 1.First press window + r, then type regedit and click ok.
+2.Further permissions tab will open then click yes, and a regedit editor will get open.
+3.In the Registry Editor a list of directories would appear, in those lists of directories search
+for the spice directory. 
+4.Keep on expanding the spice directory until you reach the command section.
+
+Finally, after clicking on remote viewer button a command line come where a graphical control
+loading and getting connected will be displayed and then finally the ubuntu will get open. On opening of ubuntu click on try ubuntu. Now, you can use ubuntu on your virtual machine.
